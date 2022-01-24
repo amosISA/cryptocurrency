@@ -1,5 +1,7 @@
 # Start project
 
+- Download zip CODE && `npm install`
+
 - To listen DB: 
 `json-server --watch db.json`
 
