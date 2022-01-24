@@ -1,0 +1,35 @@
+<div class="currencies-box">
+    <table class="table" *ngIf="$coinData | async as coins; else loading">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Acronym</td>
+                <td>Name</td>
+                <td>
+                    <button mat-icon-button color="primary" (click)="addCoin()">
+                        <mat-icon aria-label="Add">add</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coin of coins">
+                <td>{{coin.id}}</td>
+                <td>{{coin.acronym}}</td>
+                <td>{{coin.name}}</td>
+                <td>
+                    <button mat-icon-button color="accent">
+                        <mat-icon aria-label="Edit">edit</mat-icon>
+                    </button>
+
+                    <button mat-icon-button color="accent">
+                        <mat-icon aria-label="Delete">delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h3 mat-dialog-title>Add new COIN</h3>
+
+    <form *ngIf="coinForm" class="mat-dialog-content" [formGroup]="coinForm">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Acronym</mat-label>
+                <input matInput formControlName="acronym">
+            </mat-form-field>
+            <mat-error *ngIf="invalidCoinAcronym">Invalid coin acronym</mat-error>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button (click)="save()">Save</button>
+        </div>
+    </form>
+</div>
