@@ -15,5 +15,3 @@
 - Currencies validation acronym
 - Currencies POST
 - The other things that left are pretty much the same. I focused on important ones.
-
-### More if you get ME!
